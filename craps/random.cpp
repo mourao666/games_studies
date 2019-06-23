@@ -7,9 +7,15 @@ using std::setw;
 
 #include <cstdlib>
 using std::rand;
+using std::srand;
+
+#include <ctime>
+using std::time;
 
 int main()
 {
+    srand(time(0));
+
     for (int counter = 1; counter <= 20; counter++)
     {
         cout << setw(10) << (1 + rand() %6);
@@ -19,5 +25,6 @@ int main()
             cout << endl;
         }
     }
+
     return 0;
 }
